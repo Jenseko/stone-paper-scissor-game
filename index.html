@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project_paper-scissor-rock</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Rock Paper Scissors</h1>
+      <section>
+        <div class="roundbox">
+          <h2>How many rounds?</h2>
+          <form action="" id="form">
+            <div>
+              <input type="radio" name="round" value="5" id="radio5" />
+              <label for="">5</label>
+              <input type="radio" name="round" value="10" id="radio10" />
+              <label for="">10</label>
+            </div>
+            <div>
+              <input type="radio" name="round" value="15" id="radio15" />
+              <label for="">15</label>
+              <input type="radio" name="round" value="20" id="radio20" />
+              <label for="">20</label>
+            </div>
+          </form>
+        </div>
+
+        <div class="div_score">
+          <h3>USER</h3>
+          <h3>COMP</h3>
+          <p id="mainscore">0:0</p>
+        </div>
+
+        <p id="output_text">Let's play!</p>
+        <div class="div_btn">
+          <button
+            type="button"
+            name="user"
+            value="stone"
+            onclick="letsPlay(this.value)"
+          >
+            <img src="./assets/img/rock.png" alt="handsign rock" />
+          </button>
+          <button
+            type="button"
+            name="user"
+            value="paper"
+            onclick="letsPlay(this.value)"
+          >
+            <img src="./assets/img/paper.png" alt="handsign paper" />
+          </button>
+          <button
+            type="button"
+            name="user"
+            value="scissor"
+            onclick="letsPlay(this.value)"
+          >
+            <img src="./assets/img/scissor.png" alt="handsign scissor" />
+          </button>
+        </div>
+
+        <h4>MAKE YOUR MOVE</h4>
+        <a href="#">Restart</a>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
