@@ -8,6 +8,8 @@ html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/* ----------------------------- */
+
 main {
   background-color: #25272e;
   width: 70rem;
@@ -18,17 +20,30 @@ main {
 
 main h1 {
   background-color: #d9d9d9;
+  color: #25272e;
   text-align: center;
   padding-block: 2rem;
+  font-size: 2.4rem;
 }
 
 main section {
   color: #d9d9d9;
 }
 
-section .roundbox {
-  border: 3px solid #d9d9d9;
-  margin-top: 3vh;
+.roundbox {
+  border: 0.2rem solid #d9d9d9;
+  border-radius: 0.8rem;
+  text-align: center;
+  margin: 3rem 20rem;
+  padding-block: 1rem;
+}
+
+.roundbox .form div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 6.8rem;
+  gap: 1rem;
+  margin: 2rem auto;
 }
 
 section .div_score {
