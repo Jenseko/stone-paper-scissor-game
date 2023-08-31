@@ -13,10 +13,10 @@
         <h1>Rock Paper Scissors</h1>
         <div class="roundbox">
           <h2>how many rounds?</h2>
-          <form action="" class="form">
+          <form class="form">
             <div>
               <input type="radio" name="round" value="5" id="radio5" />
-              <label for="round">05</label>
+              <label for="round">5</label>
               <input type="radio" name="round" value="10" id="radio10" />
               <label for="round">10</label>
             </div>
@@ -35,14 +35,14 @@
           <h3>COM</h3>
         </div>
 
-        <p id="output_text" class="output-text">Let's Play</p>
+        <p id="output_text" class="output-text">let's play</p>
         <div class="btn-box">
           <button
             type="button"
             name="user"
             class="btn"
             value="stone"
-            onclick="letsPlay(this.value)"
+            onclick="letsPlay('Stone')"
           >
             <img src="./assets/img/rock.png" alt="handsign rock" />
           </button>
@@ -51,7 +51,7 @@
             name="user"
             class="btn"
             value="paper"
-            onclick="letsPlay(this.value)"
+            onclick="letsPlay('Paper')"
           >
             <img src="./assets/img/paper.png" alt="handsign paper" />
           </button>
@@ -60,14 +60,14 @@
             name="user"
             class="btn"
             value="scissor"
-            onclick="letsPlay(this.value)"
+            onclick="letsPlay('Scissor')"
           >
             <img src="./assets/img/scissor.png" alt="handsign scissor" />
           </button>
         </div>
 
-        <h4>MAKE YOUR MOVE</h4>
-        <a href="#">Restart</a>
+        <h4 class="move">make your move</h4>
+        <a href="" class="restart">restart</a>
       </section>
     </main>
     <script src="./assets/js/main.js"></script>
