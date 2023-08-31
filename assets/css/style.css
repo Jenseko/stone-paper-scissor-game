@@ -8,13 +8,16 @@ html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+img {
+  width: 50px;
+}
+
 /* ----------------------------- */
 
 main {
   background-color: #25272e;
   width: 70rem;
   margin: 10rem auto;
-  border: 0.2rem solid #d9d9d9;
   border-radius: 0.8rem;
 }
 
@@ -46,37 +49,59 @@ main section {
   margin: 2rem auto;
 }
 
-section .div_score {
+.score {
+  margin: 3rem 20rem;
   border: 3px solid #d9d9d9;
-  margin-top: 3vh;
+  border: 0.2rem solid #d9d9d9;
+  border-radius: 0.8rem;
+  display: flex;
+  padding: 1rem 5rem;
+  text-align: center;
 }
 
-section .div_btn {
+.score p {
   width: 80%;
   display: flex;
   justify-content: center;
+  font-size: 4rem;
 }
 
-.div_btn button {
-  padding: 0 80px;
+.output-text {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-block: 2rem;
 }
 
-.div_btn button img {
-  width: 40%;
-  display: inline-block;
-  padding: 5px -80px;
-  background-color: #3f3a3a;
-  border-radius: 45px;
+.btn-box .btn {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 1rem;
+  border-radius: 10rem;
+  border: 0.2rem solid #e2594e;
 }
 
-.div_btn button:nth-of-type(1) img {
-  transform: rotate(100deg);
+.btn-box .btn:nth-of-type(1) {
+  transform: rotate(260deg);
 }
 
-.div_btn button:nth-of-type(2) img {
-  transform: rotate(-40deg);
+.btn-box .btn img {
+  width: 70%;
+  padding-block: 0.5rem 1rem;
 }
 
-.div_btn button:nth-of-type(3) img {
-  transform: rotate(-95deg);
+.btn-box button:nth-of-type(1) img {
+  transform: scaleX(-1);
+}
+
+.btn-box button:nth-of-type(2) img {
+  transform: rotate(-50deg);
+}
+
+.btn-box button:nth-of-type(3) img {
+  transform: rotate(-110deg);
+  padding-bottom: 0.5rem;
 }

@@ -9,10 +9,10 @@
   </head>
   <body>
     <main>
-      <section>
+      <section class="app-body">
         <h1>Rock Paper Scissors</h1>
         <div class="roundbox">
-          <h2>How many rounds?</h2>
+          <h2>how many rounds?</h2>
           <form action="" class="form">
             <div>
               <input type="radio" name="round" value="5" id="radio5" />
@@ -29,17 +29,18 @@
           </form>
         </div>
 
-        <div class="div_score">
+        <div class="score">
           <h3>USER</h3>
-          <h3>COMP</h3>
-          <p id="mainscore">0:0</p>
+          <p class="mainscore" id="mainscore">0:0</p>
+          <h3>COM</h3>
         </div>
 
-        <p id="output_text">Let's play!</p>
-        <div class="div_btn">
+        <p id="output_text" class="output-text">Let's Play</p>
+        <div class="btn-box">
           <button
             type="button"
             name="user"
+            class="btn"
             value="stone"
             onclick="letsPlay(this.value)"
           >
@@ -48,6 +49,7 @@
           <button
             type="button"
             name="user"
+            class="btn"
             value="paper"
             onclick="letsPlay(this.value)"
           >
@@ -56,6 +58,7 @@
           <button
             type="button"
             name="user"
+            class="btn"
             value="scissor"
             onclick="letsPlay(this.value)"
           >
