@@ -16,7 +16,7 @@ img {
 
 main {
   background-color: #25272e;
-  width: 70rem;
+  width: 80%;
   margin: 10rem auto;
   border-radius: 0.8rem;
 }
@@ -27,6 +27,8 @@ main h1 {
   text-align: center;
   padding-block: 2rem;
   font-size: 2.4rem;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
 }
 
 main section {

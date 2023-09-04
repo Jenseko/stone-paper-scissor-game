@@ -1,4 +1,5 @@
 const displayRounds = document.querySelector(".roundbox");
+const form = document.querySelector(".form");
 const mainScore = document.querySelector("#mainscore");
 const changeText = document.querySelector("#output_text");
 
@@ -8,20 +9,20 @@ let pointsCom = 0;
 
 mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
 
-// const restartGame = () => {
-//   playedRounds = 0;
-//   pointsMe = 0;
-//   pointsCom = 0;
-//   mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
-//   changeText.innerHTML = "let's play";
-//   displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
-// };
-
 const letsPlay = (userChoice) => {
-  let rounDs = document.querySelector('input[name="round"]:checked').value;
+  let rounDs = document.querySelector('input[name="round"]:checked');
+
+  if (!rounDs) {
+    return;
+  }
+
+  rounDs = rounDs.value;
+
+  form.style.display = "none";
 
   if (playedRounds < rounDs) {
     playedRounds++;
+    displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
 
     const commandS = ["Stone", "Paper", "Scissor"];
     let comsChoice = commandS[Math.floor(Math.random() * 3)];
@@ -59,6 +60,4 @@ const letsPlay = (userChoice) => {
       }
     }
   }
-  form.style.display = "none";
-  displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
 };
