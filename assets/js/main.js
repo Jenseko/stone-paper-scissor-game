@@ -1,3 +1,5 @@
+// --- Variables ---
+
 const displayRounds = document.querySelector(".roundbox");
 const form = document.querySelector(".form");
 const mainScore = document.querySelector("#mainscore");
@@ -10,17 +12,25 @@ let playedRounds = 0;
 let pointsMe = 0;
 let pointsCom = 0;
 
-mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
+// --- Main Function ---
 
 const letsPlay = (userChoice) => {
+  // ---
+
+  radioBtns.forEach((radio) => {
+    radio.style.display = "none";
+  });
+  radioLabels.forEach((label) => {
+    label.style.display = "none";
+  });
+
+  // ---
+
   if (form.style.display !== "none") {
     let rounDs = document.querySelector('input[name="round"]:checked').value;
-    console.log(rounDs);
 
     if (playedRounds < rounDs) {
       playedRounds++;
-      console.log(playedRounds);
-      // displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
 
       document.querySelector(
         ".rounds_played"
@@ -28,7 +38,6 @@ const letsPlay = (userChoice) => {
 
       const commandS = ["Rock", "Paper", "Scissor"];
       let comsChoice = commandS[Math.floor(Math.random() * 3)];
-      console.log(comsChoice);
 
       let resultText;
 
@@ -52,10 +61,6 @@ const letsPlay = (userChoice) => {
       // Update score text
       mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
 
-      document.querySelectorAll('input[type="radio"]').forEach((radio) => {
-        radio.disabled = true;
-      });
-
       // Check game result
       if (playedRounds == rounDs) {
         if (pointsMe > pointsCom) {
@@ -66,12 +71,6 @@ const letsPlay = (userChoice) => {
           changeText.innerHTML = "It's A Quitgame !";
         }
       }
-      radioBtns.forEach((radio) => {
-        radio.style.display = "none";
-      });
-      radioLabels.forEach((label) => {
-        label.style.display = "none";
-      });
     }
   }
 };
