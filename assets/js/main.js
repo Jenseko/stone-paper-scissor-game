@@ -8,14 +8,14 @@ let pointsCom = 0;
 
 mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
 
-const restartGame = () => {
-  playedRounds = 0;
-  pointsMe = 0;
-  pointsCom = 0;
-  mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
-  changeText.innerHTML = "let's play";
-  displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
-};
+// const restartGame = () => {
+//   playedRounds = 0;
+//   pointsMe = 0;
+//   pointsCom = 0;
+//   mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
+//   changeText.innerHTML = "let's play";
+//   displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
+// };
 
 const letsPlay = (userChoice) => {
   let rounDs = document.querySelector('input[name="round"]:checked').value;
@@ -36,7 +36,7 @@ const letsPlay = (userChoice) => {
       (userChoice === "Paper" && comsChoice === "Stone") ||
       (userChoice === "Scissor" && comsChoice === "Paper")
     ) {
-      resultText = "You wins !";
+      resultText = "You win !";
       pointsMe++;
       changeText.innerHTML = `${userChoice} (YOU) beats ${comsChoice} (Com) <br><br> ${resultText}`;
     } else {
@@ -51,9 +51,9 @@ const letsPlay = (userChoice) => {
     // Check game result
     if (playedRounds == rounDs) {
       if (pointsMe > pointsCom) {
-        changeText.innerHTML = "The User Wins !";
+        changeText.innerHTML = "You Win !";
       } else if (pointsMe < pointsCom) {
-        changeText.innerHTML = "The User Lose !";
+        changeText.innerHTML = "You Lose !";
       } else {
         changeText.innerHTML = "It's a Quitgame !";
       }
