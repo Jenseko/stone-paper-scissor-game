@@ -13,7 +13,7 @@
         <h1>Rock Paper Scissor</h1>
         <div class="roundbox">
           <h2>how many rounds?</h2>
-          <form class="form">
+          <form class="form" onsubmit="return false">
             <div>
               <input type="radio" name="round" value="5" id="radio5" />
               <label for="radio5">5</label>
@@ -41,8 +41,8 @@
             type="button"
             name="user"
             class="btn"
-            value="stone"
-            onclick="letsPlay('Stone')"
+            value="Rock"
+            onclick="letsPlay('Rock')"
           >
             <img src="./assets/img/rock.png" alt="handsign rock" />
           </button>
@@ -50,7 +50,7 @@
             type="button"
             name="user"
             class="btn"
-            value="paper"
+            value="Paper"
             onclick="letsPlay('Paper')"
           >
             <img src="./assets/img/paper.png" alt="handsign paper" />
@@ -59,7 +59,7 @@
             type="button"
             name="user"
             class="btn"
-            value="scissor"
+            value="Scissor"
             onclick="letsPlay('Scissor')"
           >
             <img src="./assets/img/scissor.png" alt="handsign scissor" />
