@@ -3,6 +3,8 @@ const form = document.querySelector(".form");
 const mainScore = document.querySelector("#mainscore");
 const changeText = document.querySelector("#output_text");
 const restartLink = document.querySelector(".restart");
+const radioBtns = document.querySelectorAll('input[type="radio"]');
+const radioLabels = document.querySelectorAll("label");
 
 let playedRounds = 0;
 let pointsMe = 0;
@@ -11,8 +13,6 @@ let pointsCom = 0;
 mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
 
 const letsPlay = (userChoice) => {
-  //   displayRounds.style.display = "none";
-
   if (form.style.display !== "none") {
     let rounDs = document.querySelector('input[name="round"]:checked').value;
     console.log(rounDs);
@@ -20,7 +20,11 @@ const letsPlay = (userChoice) => {
     if (playedRounds < rounDs) {
       playedRounds++;
       console.log(playedRounds);
-      //   displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
+      // displayRounds.innerHTML = `${playedRounds} / ${rounDs}`;
+
+      document.querySelector(
+        ".rounds_played"
+      ).textContent = `${playedRounds} / ${rounDs}`;
 
       const commandS = ["Rock", "Paper", "Scissor"];
       let comsChoice = commandS[Math.floor(Math.random() * 3)];
@@ -62,16 +66,12 @@ const letsPlay = (userChoice) => {
           changeText.innerHTML = "It's A Quitgame !";
         }
       }
+      radioBtns.forEach((radio) => {
+        radio.style.display = "none";
+      });
+      radioLabels.forEach((label) => {
+        label.style.display = "none";
+      });
     }
   }
 };
-
-// restartLink.addEventListener("click", () => {
-//   playedRounds = 0;
-//   pointsMe = 0;
-//   pointsCom = 0;
-//   mainScore.innerHTML = `${pointsMe} : ${pointsCom}`;
-//   changeText.innerHTML = "Let's play";
-//   form.style.display = "block";
-//   displayRounds.innerHTML = "";
-// });
