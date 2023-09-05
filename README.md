@@ -1,4 +1,6 @@
-# rock-paper-scissor-game
+# Stein-Papier-Schere (Spiel)
+
+Ein Spieleklassiker, den jeder kennt und liebt!
 
 ### Build with <br>
 <ul>
